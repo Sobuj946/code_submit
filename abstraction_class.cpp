@@ -5,7 +5,7 @@ class Vehicle
     int number;
     string colour;
     public:
-    virtual void show()=0;//
+    virtual void show(string s)=0;//
     protected:
     int getNumber(void);
     string getColour();
@@ -28,20 +28,22 @@ string Vehicle:: getColour()
 class TLV:public Vehicle
 {
     public:
-   void show() override{
+   void show(string s) override{
         int number=getNumber();
         string colour=getColour();
         cout<<"The car number is:"<<number<<endl;
         cout<<"The car colour is:"<<colour<<endl;
+        cout<<"The car string is:"<<s<<endl;
+
     }
     
 };
 
 int main(){
     Vehicle *a=new TLV();
-    a->show();
+    a->show("hi");
     TLV b;
-    b.show();
+    b.show("hello");
     Vehicle * car=new TLV();
     cout<<car<<endl;
     Vehicle * car1=new TLV();
