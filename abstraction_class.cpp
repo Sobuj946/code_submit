@@ -38,8 +38,8 @@ class TLV:public Vehicle
 };
 
 int main(){
-    // Vehicle *a=new TLV();
-    // a->show();
+    Vehicle *a=new TLV();
+    a->show();
     TLV b;
     b.show();
     Vehicle * car=new TLV();
